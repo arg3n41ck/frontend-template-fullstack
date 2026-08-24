@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ruflo}
+      POSTGRES_USER: ${POSTGRES_USER:-ruflo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ruflo}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ruflo-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ruflo} -d ${POSTGRES_DB:-ruflo}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  ruflo-postgres:
