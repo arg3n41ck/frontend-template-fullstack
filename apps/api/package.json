@@ -1,5 +1,5 @@
 {
-  "name": "@ruflo/api",
+  "name": "@template/api",
   "version": "0.1.0",
   "description": "",
   "author": "",
@@ -28,7 +28,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "@ruflo/contracts": "workspace:*",
+    "@template/contracts": "workspace:*",
     "@nestjs/config": "^4.0.2",
     "@nestjs/typeorm": "^11.0.0",
     "typeorm": "^0.3.28",

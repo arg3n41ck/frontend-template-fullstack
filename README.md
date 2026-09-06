@@ -1,4 +1,4 @@
-# Ruflo Fullstack Template
+# Frontend Fullstack Template
 
 Lean pnpm monorepo for a fullstack product without prebuilt business screens.
 
@@ -37,3 +37,7 @@ Add a web primitive from the workspace root with:
 ```bash
 pnpm dlx shadcn@latest add button -c apps/web
 ```
+
+## AI-assisted work
+
+Start with `AGENTS.md`, then `docs/AI_SKILLS.md` and `docs/ARCHITECTURE.md`. Skills are included and loaded on demand, not installed as executable background agents. No framework migration or extra dependencies are required to use this starter.

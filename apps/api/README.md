@@ -1,6 +1,6 @@
 # API workspace
 
-NestJS transport and persistence boundary for the Ruflo fullstack template.
+NestJS transport and persistence boundary for the Frontend fullstack template.
 
 - Global prefix: `/api`
 - Health route: `GET /api/health`

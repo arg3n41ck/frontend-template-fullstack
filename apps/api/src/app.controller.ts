@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import type { HealthResponse } from '@ruflo/contracts';
+import type { HealthResponse } from '@template/contracts';
 
 @Controller('health')
 export class AppController {

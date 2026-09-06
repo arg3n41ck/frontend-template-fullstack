@@ -1,38 +1,33 @@
-# AI skill profile
+# Project skill profile
 
-This repository intentionally ships a curated stack-specific profile, not the complete skill library.
+Curated portable skills; no orchestration runtime is installed or required. Canonical source: `.ai/skills`. `.agents/skills`, `.codex/skills` and `.claude/skills` are relative compatibility links.
 
-## Included
+## Load on demand
 
-- `find-skills`
-- `ui-ux-pro-max`
-- `design-system-steward`
-- `frontend-design`
-- `frontend-agent`
-- `frontend-error-ux`
-- `react-19-patterns`
-- `nextjs-app-router-practices`
-- `backend-engineering`
 - `backend-api-contracts`
-- `backend-data-persistence`
-- `backend-security-auth`
-- `backend-reliability-observability`
-- `backend-performance-scaling`
-- `backend-framework-patterns`
 - `backend-code-review`
+- `backend-data-persistence`
+- `backend-engineering`
+- `backend-framework-patterns`
+- `backend-performance-scaling`
+- `backend-reliability-observability`
+- `backend-security-auth`
 - `behaviour-harness`
+- `design-system-steward`
+- `feature-architecture`
+- `find-skills`
+- `frontend-agent`
+- `frontend-design`
+- `frontend-error-ux`
+- `nextjs-app-router-practices`
+- `project-kickoff`
+- `react-19-patterns`
+- `review-changes`
+- `systematic-debugging`
+- `ui-ux-pro-max`
 - `verification-before-completion`
+- `writing-plans`
 
-## Selection rules
+## Precedence
 
-- `find-skills`: discover a missing workflow before inventing one.
-- UI/UX group: research patterns, enforce the design system, compose polished interfaces and cover error/loading/empty states.
-- Framework skills: apply only to the framework in this repository.
-- Backend skills (fullstack only): contracts, persistence, security, observability, scale and framework boundaries.
-- `verification-before-completion`: evidence gate for every meaningful change.
-
-## Avoided duplication
-
-`frontend-agent` is the general implementation workflow; `frontend-design` is visual composition; `design-system-steward` protects tokens/primitives; `ui-ux-pro-max` is broader pattern research. They overlap at the edges but have different triggers, so keep them separate and do not load all four for every small task.
-
-Do not copy every skill from the source catalog. Add a skill only when a repeated project workflow needs it and document why here.
+User task and AGENTS.md -> current source and docs/ARCHITECTURE.md -> applicable skill -> optional references. The framework skill must match package.json. Generic skill examples cannot force a stack change, extra dependencies or an unrelated refactor. Missing optional tools/references are reported, not installed silently.

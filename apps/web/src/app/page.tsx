@@ -1,4 +1,4 @@
-import type { HealthResponse } from "@ruflo/contracts";
+import type { HealthResponse } from "@template/contracts";
 import { ArrowRight, Boxes, Database, Server } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";

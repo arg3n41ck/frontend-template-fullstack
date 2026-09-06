@@ -1,12 +1,12 @@
 {
-  "name": "ruflo-template-fullstack",
-  "version": "0.1.0",
+  "name": "frontend-template-fullstack",
+  "version": "0.2.0",
   "private": true,
   "packageManager": "pnpm@11.21.0",
   "scripts": {
-    "dev": "pnpm --parallel --filter @ruflo/web --filter @ruflo/api dev",
-    "dev:web": "pnpm --filter @ruflo/web dev",
-    "dev:api": "pnpm --filter @ruflo/api dev",
+    "dev": "pnpm --parallel --filter @template/web --filter @template/api dev",
+    "dev:web": "pnpm --filter @template/web dev",
+    "dev:api": "pnpm --filter @template/api dev",
     "build": "pnpm -r --if-present build",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",
