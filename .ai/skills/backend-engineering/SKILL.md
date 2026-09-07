@@ -14,7 +14,7 @@ Use this as the backend architecture router. Start broad, identify the dominant 
 1. Read project wiki and nearby feature docs before proposing architecture.
 2. Identify the affected backend boundary: API contract, data model, auth, worker, external dependency, cache, or service split.
 3. State the constraint that matters most: correctness, latency, throughput, isolation, cost, operability, security, delivery speed, or migration safety.
-4. Use `agent-assets/backend/references/backend-quality-checklist.md` for a cross-cutting check.
+4. Use `.ai/WORKFLOW.md` for cross-cutting risk checks and `.codex-harness/VERIFICATION.md` for actual project commands; the concern router below selects focused backend skills.
 
 ## Decision Rules
 
