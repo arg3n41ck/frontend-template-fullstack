@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadSearchParams, serializeSearchParams } from '../src/lib/search-params.ts';
+import { loadSearchParams, serializeSearchParams } from '../src/shared/libs/search-params.ts';
 test('missing and malformed values have bounded defaults', () => {
  for (const value of ['', '0', '-1', '1.5', '2abc', 'Infinity', '1000001']) {
   assert.equal(loadSearchParams(new URLSearchParams({ page: value })).page, 1);

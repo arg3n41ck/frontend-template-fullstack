@@ -1,6 +1,6 @@
 {
   "name": "frontend-template-fullstack",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "packageManager": "pnpm@11.21.0",
   "scripts": {
@@ -11,6 +11,8 @@
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test",
-    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "ui:check": "pnpm --filter @template/web ui:check",
+    "ui:add": "pnpm --filter @template/web ui:add"
   }
 }

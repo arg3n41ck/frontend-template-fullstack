@@ -32,11 +32,27 @@ pnpm verify
 
 Синхронизация схемы базы намеренно выключена. Для изменений схемы добавляйте проверенные миграции.
 
-Добавление web-примитива из корня workspace:
+## Структура frontend
+
+```text
+apps/web/src/app/                       тонкие Next routes/layouts и providers
+apps/web/src/modules/                   доменные модули и экраны
+apps/web/src/shared/ui/shadcn/          примитивы shadcn
+apps/web/src/shared/hooks/              общие hooks
+apps/web/src/shared/libs/               общие утилиты
+apps/web/src/shared/config/styles/      theme tokens и глобальный CSS
+```
+
+## shadcn/ui
+
+Часто используемые web-примитивы уже подготовлены. Остальные добавляйте из корня workspace через закреплённый CLI:
 
 ```bash
-pnpm dlx shadcn@latest add button -c apps/web
+pnpm ui:check dialog
+pnpm ui:add dialog
 ```
+
+Палитра frontend редактируется только в `apps/web/src/shared/config/styles/palette.css`; shadcn-компоненты автоматически получают её через semantic tokens.
 
 ## Работа с ИИ
 
@@ -62,4 +78,4 @@ node .ai/context.mjs --check
 
 ## Подготовка к выпуску
 
-Актуальные проверки и ограничения — [VERIFICATION_STATUS](docs/VERIFICATION_STATUS.md). Локальные env/runtime/test-артефакты исключены из Git; `.env.example` разрешён. Версия шаблона: **v0.3.0**.
+Актуальные проверки и ограничения — [VERIFICATION_STATUS](docs/VERIFICATION_STATUS.md). Локальные env/runtime/test-артефакты исключены из Git; `.env.example` разрешён. Версия шаблона: **v0.4.0**.

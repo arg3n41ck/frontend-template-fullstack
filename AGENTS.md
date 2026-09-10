@@ -23,14 +23,14 @@ For new product work, read `docs/PROJECT_BRIEF.md` if present and use `project-k
 ## Architecture
 
 - pnpm workspace, Next.js, NestJS, TypeORM, PostgreSQL, shared TypeScript contracts, shadcn/ui.
-- `apps/web` UI/routes; `apps/api` transport/domain/persistence; `packages/contracts` serializable shared contracts; `compose.yaml` local PostgreSQL.
+- `apps/web/src/app` thin Next routes/providers, `apps/web/src/modules` domain UI, and `apps/web/src/shared/ui/shadcn` registry primitives; `apps/api` owns backend transport/domain/persistence; `packages/contracts` holds serializable shared contracts.
 - Do not share ORM entities or secrets with the web app. Shared contracts are transport-only. Database changes require migrations; `synchronize` stays false.
 
 ## UI/UX
 
 - shadcn/ui source is owned by this repository; add primitives with the shadcn CLI instead of hand-copying registry code.
 - Compose product components outside the primitive folder. Do not put business logic into shadcn primitives.
-- Use semantic theme tokens; avoid hardcoded colors and duplicate one-off UI primitives.
+- `apps/web/src/shared/config/styles/palette.css` is the frontend color source of truth. Map palette values to semantic tokens there; product and shadcn code must use semantic classes, never raw Tailwind colors.
 - Use Lucide icons for standard interface symbols. Keep focus, keyboard behavior, loading, empty and error states accessible.
 - For UI work, consult `ui-ux-pro-max`, `design-system-steward`, `frontend-design`, and `frontend-error-ux` as needed.
 

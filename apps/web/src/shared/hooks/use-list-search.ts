@@ -1,7 +1,7 @@
 "use client"
 
 import { useQueryStates } from 'nuqs'
-import { searchParsers, type SearchState } from '../lib/search-params'
+import { searchParsers, type SearchState } from '@/shared/libs/search-params'
 
 // Applied state lives in the URL. Debounced text drafts belong in the feature UI.
 export function useListSearch(options: { serverDriven?: boolean } = {}) {

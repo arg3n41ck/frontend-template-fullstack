@@ -4,3 +4,9 @@ packages:
 
 allowBuilds:
   unrs-resolver: false
+
+overrides:
+  "hono@<4.13.5": "4.13.7"
+  "js-yaml@>=3.0.0 <3.15.2": "3.15.2"
+  "js-yaml@>=4.0.0 <4.3.2": "4.3.2"
+  "multer@<2.3.0": "2.3.0"
